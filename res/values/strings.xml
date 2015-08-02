@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ListViewRefresh</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="footer_loadmore">加载更多</string>
+
+</resources>
