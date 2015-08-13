@@ -1,7 +1,5 @@
 package com.zhangyihao.listviewrefresh;
 
-import java.text.SimpleDateFormat;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
