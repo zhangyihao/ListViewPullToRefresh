@@ -80,3 +80,23 @@ ptrListViewExtrasEnabled 决定了Header，Footer以何种方式加入mPullRefre
 最后2个其实对于用户体验还是挺重要的，如果设置的时候考虑下~。其他的属性自己选择就好。
 
 注：上述属性很多都可以代码控制，如果有需要可以直接mPullRefreshListView.set属性名 查看
+
+###使用上得一些注意点
+1. 设置列表项单击事件
+mSchemeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		Object item = parent.getAdapter().getItem(position);//注意此处是先获取到Adapter，然后才取Item
+	}
+			
+});
+
+2. 设置列表项长按事件
+mSchemeListView.getRefreshableView().setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+	@Override
+	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+		return true;
+	}		
+});
